@@ -1,0 +1,144 @@
+#Members{
+    
+    .container{
+        width: 68%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+
+        article{
+background: $white-color;
+border-radius:1rem;
+box-shadow: 0 1.5rem 1,5rem rgba($color: #000000, $alpha: 0.1);
+position: relative;
+// position relative because we want to position our social media links absolute
+
+transition: all 200ms ease;
+
+img.imgt{
+    height: 460px;
+}
+
+
+&:hover{
+    box-shadow:none;
+
+    .member-image::before{
+        left: 0;
+        border-radius: 1rem;
+    }
+    .member-socials{
+        opacity: 1;
+        visibility: visible;
+    }
+
+     .member-whatsapp{
+        opacity: 1;
+        visibility: visible;
+    }
+}  
+
+.member-image{
+    border-radius: 1.4rem;
+    position: relative;
+    overflow: hidden;
+
+    // creating overlay on our i,mage using the before pseudo selector
+    &::before{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: -100%;
+        background: linear-gradient(135deg, rgba($yellow-color, 0.8), rgba($yellow-color-variant, 0.8) );
+        border-radius: 50%;
+        transition: all 1s ease;
+    }
+   
+}
+
+.member-details{
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+.member-socials{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    top: 1.2rem;
+    right: 1.2rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1s 400ms ease;
+
+    a{
+        background: $primary-color;
+        color: white;
+        padding: 0.4rem;
+        display: flex;
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.3rem;
+        border-radius: 50%;
+        transition: all 400ms ease;
+        align-items: center;
+        justify-content: center;
+
+    &:hover{
+        background: $secondary-color;
+    }
+    }
+}
+
+.member-whatsapp{
+    background-color: $success-color;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-weight: bolder;
+    bottom: 30%;
+    border-radius: 50%;
+    display: flex;
+    width: 80px;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1s 400ms ease;
+
+
+    a{
+        font-size: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+        }
+    }
+}
+
+
+@media screen and (max-width:1024px){
+    #Members{
+        .container{
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
+@media screen and (max-width:600px){
+    #Members{
+        .container{
+            grid-template-columns: 1fr ;
+        }
+    }
+}

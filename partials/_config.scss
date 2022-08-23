@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+   list-style: none;
+   text-decoration: none;
+   box-sizing: border-box; 
+}
+
+// using variable in sass , we could still create a different partials for the variables if the project was big enough
+
+
+$primary-color:#480ca8;
+$primary-color-variant:#4cc9f0;
+$secondary-color:#f72585;
+$white-color:#ffff;
+$light-color:rgba(#fff, 0.7);
+$black-color:#0c031b;
+$success-color:#54eb72;
+$container-lg:82%;
+$container-sm:90%;
+$width-sm:90%;
+$widht-md:55%;
+$yellow-color:#dfac13;
+$yellow-color-variant:#674e03;
+
+
+
+// end of our variables in our project
+

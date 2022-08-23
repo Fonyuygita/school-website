@@ -1,0 +1,90 @@
+header{
+    @include gradientBackg ;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+
+
+    .floating-icon a{
+        color: whhite;
+        font-size: 3rem;
+        background: $primary-color;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        color: white;
+    }
+    .container{
+        margin-top: 3rem;
+        display: grid;
+        grid-template-columns: 46% 46%;
+        gap: 8%;
+        justify-content: space-between;
+
+        .header_content{
+            h1{
+                font-size: 4.5rem;
+                line-height: 1.1;
+                
+                
+            }
+
+            p{
+                margin: 1rem 0 2rem;
+                color: #fff;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+
+// for medium screens
+
+@media screen and (max-width:1024px){
+    header{
+        height: 60vh;
+        .container{
+
+            margin-top: 4rem;
+            .header_content{
+
+                h1{
+                    font-size: 1rem;
+                }
+
+                p{
+                    font-size: 0.8rem;
+                }
+            }
+           
+        }
+    }
+}
+
+// for mobile phones
+@media screen and (max-width:600px){
+header{
+    height: 100vh;
+    padding-top: 3rem;
+
+    .container{
+        grid-template-columns: 1fr;
+        text-align: center;
+        .header_content{
+            h1{
+                font-size: 2rem;
+                margin-bottom: 2rem;
+            }
+            p{
+                
+                width: 67%;
+                margin: 0 auto;
+                margin-bottom: 2rem;
+                font-size: 1rem;
+            }
+        }
+    }
+}
+}

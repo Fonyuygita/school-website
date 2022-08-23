@@ -1,0 +1,82 @@
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+$black-color:#0c031b;
+
+body{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 1.5;
+    color: black;
+  background-color:$white-color;
+  
+}
+// contains general stylng for some elements in our html
+.container{
+    width: $container-lg;
+    margin: 0 auto;
+    // container is a general class
+}
+
+img{
+    display: block;
+    width: 100%;
+}
+
+h1,h2,h3,h4,h5{
+    line-height: 1.2;
+
+}
+
+
+// for different sections ini our webpage we should have the following stylings
+
+section{
+    margin-top: 6rem;
+
+    // inside each section, we are going to have an h1 and a paragraph, so we can style that using nesting in sass, to get direct element after section, we do it as followa
+
+    & > h2{
+        text-align: center;
+
+
+
+    }
+
+    & > p{
+        text-align: center;
+        width: 42%;
+        margin: 0.6rem auto 2.5rem;
+    }
+}
+
+// let us now write a general stle for the buttom
+.btn{
+    // here we are going to use mixins
+    @include button()
+}
+.btn-primary{
+
+    @include button($white-color, $primary-color);
+}
+
+/*  MEDIA QUERIES FOR MEDIUM DEVICES */
+
+
+@media screen and (max-widht:1024px){
+.container{
+    width: $widht-md;
+
+}
+}
+/*  MEDIA QUERIES FOR SMALLER DEVICES */
+
+@media screen and (max-width:600px){
+section{
+    &>p{
+        width: $width-sm
+    }
+}
+}

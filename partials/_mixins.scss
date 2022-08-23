@@ -1,0 +1,41 @@
+@mixin button($txtColor:$white-color, $bgColor:$secondary-color) {
+    
+    // mixins are just like functions(block of codes) so that whenever we want to use it anywhere we can just call it , the good think is mixins can take arguments and later on be vchange
+    display: inline-block;
+    width: fit-content;
+    padding: 0.7rem 1rem;
+    border-radius: 0.4rem;
+    background-color: $bgColor;
+    color: $txtColor;
+    transition: all 400ms ease-in-out;
+
+
+    // so let us create the hover effect with our mixins
+
+    &:hover{
+
+        background: lighten($bgColor, 8%);
+        box-shadow: 0  1rem 1.6rem rgba($black-color, 1.5);
+    }
+}
+@mixin  gradientBackg {
+    background: linear-gradient(135deg, $yellow-color, $yellow-color-variant);
+    color: white;
+    
+    // we want every h1, h2 , h3, h4 to have the following styles
+
+    h1,h2,h3,h4,h5{
+        color: rgba($black-color, 1.5);
+    }
+}
+
+@mixin  gradientBackg2 {
+    background: linear-gradient(135deg, $primary-color, $primary-color-variant);
+    color: white;
+    
+    // we want every h1, h2 , h3, h4 to have the following styles
+
+    h1,h2,h3,h4,h5{
+        color: rgba($white-color, 1.5);
+    }
+}

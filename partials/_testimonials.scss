@@ -1,0 +1,60 @@
+.swiper{
+ 
+  width: $container-lg;
+    .swiper-wrapper{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 4rem;
+        
+      
+    
+        
+        .swiper-slide{
+  @include gradientBackg;
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  cursor: default;
+  font-size: 0.9rem;
+  text-align:center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+p{
+    margin-bottom: 1.5rem;
+}
+
+
+.student{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+  .avatar{
+    width: 2.5rem;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    border: 2px solid $primary-color;
+  }
+        }
+
+    }
+    .swiper-pagination-bullet{
+      background: red;
+    font-size: 3rem;
+    
+      
+    }
+}
+
+
+@media screen and (max-width:600px){
+  .swiper{
+    .swiper-slide{
+      padding: 1.5rem;
+    }
+  }
+}
